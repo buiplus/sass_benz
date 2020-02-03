@@ -1,0 +1,47 @@
+@mixin button($color,$fs,$bg,$pd-top-bottom,$pd-left-right,$color-hover,$bg-hover) {
+    color: $color;
+    font-size: $fs;
+    background: $bg;
+    padding: $pd-top-bottom $pd-left-right;
+    transition: 0.5s;
+    border: none;
+    &:hover{
+        color: $color-hover;
+        background: $bg-hover;
+    }
+}
+@mixin text($color,$fs,$fw) {
+    color: $color;
+    font-size: $fs;
+    font-weight: $fw;
+}
+
+@mixin  line($width,$height,$bg-color) {
+    width: $width;
+    height: $height;
+    background:$bg-color; 
+}
+
+
+@mixin setMediaQuery($type){
+    @if $type == xl {
+        @media screen and (max-width:$xl) {
+            @content;
+        }
+    }@else if $type == lg {
+        @media screen and (max-width:$lg) {
+            @content;
+        }
+    }
+    @else if $type == md{
+        @media screen and (max-width:$md) {
+            @content;
+        }
+    }
+    @else if $type == sm{
+        @media screen and (max-width:$sm) {
+            @content;
+        }
+    }
+    
+}

@@ -1,0 +1,53 @@
+.footer{
+   position: relative;
+    @include setMediaQuery(lg){
+      .footer__language{
+          span{
+              font-size: 14px;
+              margin: 0;
+          }
+      }
+      
+    }
+    @include setMediaQuery(md){
+
+        z-index: 2;
+        padding-top: 0px;
+        hr{
+            padding-top: 0px;
+        }
+        .footer__language{
+            span{
+                margin: 0;
+            }
+        }
+      
+    }
+    @include setMediaQuery(sm){
+        img{
+            width: 30%;
+        }
+        span{
+                margin-left:5px!important;
+               
+        }
+        .footer__menu{
+            ul{
+                li{
+                    a{
+                        font-size: 14px;
+                    }
+                }
+            }
+        }
+        .link-top{
+            position: absolute;
+            bottom: 1%;
+            right: 2%;
+            color: $color-gray;
+            text-decoration: none;
+        }
+      
+    }
+  
+}

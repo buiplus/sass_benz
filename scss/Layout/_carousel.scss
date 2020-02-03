@@ -1,0 +1,31 @@
+.carousel{
+    .carousel-item{
+       .carousel-caption{
+           top: 5%;
+           left: 10%;
+           text-align: left;
+           h1{
+               width: 45%;
+               font-size: $fs-3;
+               margin-top: $mg-3;
+               padding-top: $pd-top -10;
+               margin: $mg-3 +10 0;
+               color: $color-white;
+           }
+           .line__carousel{
+            width: 100px;
+            height: 3px;
+            background: $color-white;
+         }
+            .btn-read-more{
+                @include button($color-white,$fs-1,$color-lightback,$pd-1+3,$pd-1+15,$color-gray,$color-black);
+               border: none;
+            }
+            .carousel-caption--footer{
+                margin-top: 150px;
+                font-size: $fs-1;
+            }
+       }
+    }
+    
+}

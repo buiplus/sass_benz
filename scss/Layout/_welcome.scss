@@ -1,0 +1,51 @@
+.welcome{
+    padding: $mg-1;
+    background: $color-black;
+    .line__welcome{
+       @include line($width,$height,$color-white);
+        
+    } 
+    h1{
+        @include text($color-white,$fs-2 +5,$fw-1);
+        margin-top: $mg-3;
+    }
+    p{
+        @include text($color-white,$fs-1,$fw-1+100);
+    }
+    button{
+        @include button($color-white,$fs-1,$bg-color,$pd-1 + 1, $pd-1 + 7,$color-white,$color-blue);
+        border: none;
+        margin: $mg-1;
+    }
+    .welcome__content{
+        display: grid;
+        grid-template-columns: repeat(4,1fr);
+        grid-gap: 10px;
+        .welcome__item{
+            position: relative;
+            top: 0;
+            left: 0;
+            z-index: 1;
+            .welcome__overlay{
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                width: 100%;
+                height: 5%;
+                background: $color-blue;
+                z-index: 10;
+                overflow: hidden;
+               transform: translateY(9px);
+                transition: all 0.5s;
+                opacity: 0;
+            }
+            &:hover .welcome__overlay{
+                transform: translateY(0);
+                opacity: 1;
+             }
+          
+        }
+       
+
+    }
+}

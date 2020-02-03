@@ -1,0 +1,85 @@
+#sub__menu{
+    @include setMediaQuery(md){
+        bottom: 0;
+        width: 100%;
+        top: unset;
+        right: unset;
+        transform: unset;
+        z-index: 1;
+        ul{
+            margin: 0;
+            width: 100%;
+            li{
+                padding-top: 15px;
+                float: left;
+                display:inline-block;
+                text-align: center;
+                width: 25%;
+                height: 65px;
+                margin: 0;
+                transform: unset;
+                vertical-align: bottom;
+                background:$color-grayblack;
+                border:1px solid #000000;
+                font-size: 13px;
+                &:hover{
+                    transform: unset;
+                }
+                .text__share{
+                    display:block;
+                }
+                .menu__share{
+                    // display: none;
+                    b{
+                        i{
+                            text-align: center;
+                        }
+                    }
+                }
+                span.text{
+                    display: block;
+                    text-align: center;
+                    margin: 0;
+                    padding-left: 0;
+                    padding-right: 0;
+                }
+                .cover__icon{
+                    right: -5px;
+                }
+                .icon-hover{
+                    height: 40px;
+                }
+                &:focus{
+                    .menu__share{
+                        height: unset;
+                    }
+                }
+            }
+            .btn-share{
+                position: relative;
+                .menu__share{
+                    position: absolute;
+                    width: 100%;
+                    left: 0;
+                    bottom: 100%;
+                    text-align: center;
+                    background: $color-grayblack;
+                    b{
+                        display: block;
+                        width: 100%;
+                        &:hover{
+                            color: $color-blue;
+                        }
+                    }
+                }
+            }
+           
+        }
+        
+    }
+    @media screen and (min-width: 768px){
+        .menu__share{
+           display: block;
+        }
+     }
+}

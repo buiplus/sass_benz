@@ -1,0 +1,50 @@
+.carousel{
+    
+    @include setMediaQuery(md){
+        .carousel-control-prev{
+            top: 0%;
+            height: 50%;
+         }
+         .carousel-control-next{
+            top: 0%;
+            height: 50%;
+          
+         }
+        .carousel-caption{
+            height: unset;
+            position: unset;
+            padding: 0;
+            padding-left: $pd-bottom;
+        }
+        .carousel-item{
+            img{
+                display: block;
+                width: 100%;
+            }
+            padding-bottom: $pd-bottom - 20;
+            color: black!important;
+            background: $color-gray;
+            .line__carousel{
+                @include line($width,$height,$color-black !important);
+                margin-top: $pd-bottom - 20;
+                margin-bottom: 0;
+            }
+            h1{
+                display: block;
+                width: 100%!important;
+                color: $color-black!important;
+                font-size: $fs-1 + 4!important;
+                margin:$mg-3 - 20 0!important;
+                padding: 0!important;
+            }
+            p{
+                position: unset;
+            }
+            .carousel-caption--footer{
+                position: block;
+                padding-top: 0px!important;
+                z-index: 100000;
+            }
+        }
+    }
+}

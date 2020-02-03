@@ -1,0 +1,36 @@
+.info{
+    background: $color-black;
+    padding: $pd-bottom 15px;
+    .col-md-3{
+        padding: 0;
+    }
+    .info__item{
+        .line__info{
+            @include line($width,$height,$color-white);
+        }
+        h3{
+            color: $color-white;
+            margin-top: $mg-3 - 10;
+            @include text($color-white,$fs-2,$fw-normal);
+        }
+        .info__hr{
+            border-top: 1px solid $color-gray;
+        
+        }
+        .info__content{
+            ul{
+                list-style: none;
+                li{
+                    a{
+                        color: $color-gray;
+                        text-decoration: none;
+                        transition: all 0.5s;
+                        &:hover{
+                            color: $color-blue;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

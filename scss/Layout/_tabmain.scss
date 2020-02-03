@@ -1,0 +1,102 @@
+.tabMain{
+    background: black;
+    overflow: hidden;
+    img{
+        width: 100%;
+        display: block;
+    }
+    .nav.nav-tabs{
+        width: 100%;
+        justify-content: center;
+        border:none;
+        padding-top: $pd-top;
+        padding-bottom: $pd-bottom;
+        .nav-link{
+            border:none;
+            color: $color-white;
+            .line__tabmain{
+                width: 100%;
+                height: 1px;
+                background: $color-blue;
+                margin-top: 5px;
+                display: none;
+            }
+            &:focus{
+                .line__tabmain{
+                    display: block;
+                }
+            }
+        }
+        .nav-link.active{
+            background: black;
+            color: $color-blue;
+        }
+    }
+    .tab-content{
+       .tabmain__item{
+           float: left;
+           width: 33.3333%;
+           height: 50%;
+           .tabmain__item__content{
+               position: relative;
+               overflow: hidden;
+               img{
+                     width: 100%;
+                     display: block;
+                }
+                .tabmain__item__info{
+                    position: absolute;
+                    bottom: 0;
+                    width: 100%;
+                    height: 60px;
+                    background: $color-bg-title;
+                    color: $color-white;
+                    transition: all 0.8s;
+                    h3{
+                        padding: 15px 20px;
+                        margin: 0;
+                    }
+                    p{
+                        opacity:0;
+                        padding: 0 20px;
+                        margin: 0;
+                    }
+                }
+                &:hover{
+                    .tabmain__item__info{
+                        background: $color-bg-title-hover;
+                        height: 130px;
+                        p{
+                            opacity: 1;
+                        }
+                    }
+
+                }
+           }
+       }
+       .showmore{
+           button{
+               @include button($color-gray,$fs-1 -2,$color-bg-input, $pd-1 +2,$pd-1+10,$color-white,$color-grayblack);
+               margin-top: $mg-3;
+           }
+       }
+       .tabmain__item.tabmain__item--config{
+           width: 66.6667%;
+           height: 500px;
+         
+       }
+       
+    }
+    .tabmain__footer{
+           margin-top: $mg-3 + 40;
+           color: $color-white;
+           .tabmain__footer__title{
+               span{
+                   margin-right:$mg-3; 
+               }
+           }
+           .tabmain__footer__content{
+               font-size: $fs-1 -6;
+           }
+    }
+}
